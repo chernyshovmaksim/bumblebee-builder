@@ -7,7 +7,6 @@ const sass         = require('gulp-sass');
 const webp         = require('gulp-webp');
 const rename       = require('gulp-rename');
 const webpack      = require('webpack-stream');
-const purgecss     = require('gulp-purgecss');
 const sourcemaps   = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
@@ -102,3 +101,8 @@ const watching = cb => {
 
 exports.default = series(clean, images, parallel(style, scripts, watching, server));
 exports.build = series(clean, images, scripts, MinifyStyle);
+
+exports.images = images;
+exports.scripts = scripts;
+exports.style = style;
+exports.MinifyStyle = MinifyStyle;
