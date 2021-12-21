@@ -1,0 +1,44 @@
+//======================================================================================
+//======================================================================================
+
+.footer {
+	background-color: $secondaryColor;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 0;
+	}
+
+	&__nav {
+	}
+
+	&__copyright {
+		color: $mainColor;
+	}
+}
+.container {
+}
+.nav-footer {
+	&__item {
+		color: $mainColor;
+		padding-right: 1rem;
+	}
+}
+.copyright-footer {
+	a {
+		color: $mainColor;
+	}
+}
+
+//======================================================================================
+//======================================================================================
+
+@media (max-width: 768px) {
+	.footer__container {
+		flex-direction: column;
+		text-align: center;
+	}
+	.copyright-footer {
+		margin-top: 2rem;
+	}
+}

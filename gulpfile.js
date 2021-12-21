@@ -64,11 +64,16 @@ const scripts = () => {
 		.pipe(bs.stream());
 };
 
-const images = () => {
-	return src("./app/img/**/*")
+const images = (cb) => {
+	src(["./app/img/**/*", "!./app/img/**/*.svg"])
 	.pipe(webp())
 	.pipe(dest("./public/img"))
 	.pipe(bs.stream());
+
+	src(["./app/img/**/*.svg"])
+	.pipe(dest("./public/img"))
+	.pipe(bs.stream());
+	cb();
 };
 
 

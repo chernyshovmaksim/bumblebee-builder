@@ -1,0 +1,148 @@
+.header {
+	background-image: url("../img/bg.webp");
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	// .header__overlay
+
+	&__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		background-color: rgba($secondaryColor, 0.8);
+	}
+
+	// .header__top
+
+	&__top {
+		position: relative;
+		padding: 1rem 0;
+		background-color: $secondaryColor;
+		z-index: 3;
+	}
+
+	// .header__hero
+
+	&__hero {
+	}
+}
+.top-header {
+	// .top-header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .top-header__logo
+
+	&__logo {
+	}
+
+	// .top-header__nav
+
+	&__nav {
+	}
+}
+
+.logo {
+	// .logo__link
+
+	&__link {
+	}
+
+	// .logo__img
+
+	&__img {
+		width: 150px;
+	}
+}
+.nav {
+	// .nav__list
+
+	&__list {
+		font-size: 14px;
+	}
+
+	// .nav__item
+
+	&__item {
+		color: #fff;
+		margin-left: 2rem;
+		// text-transform: uppercase;
+		// text-decoration: none;
+	}
+}
+.top-header {
+	// .top-header__burger
+
+	&__burger {
+	}
+}
+.burger {
+	// .burger__icon
+
+	&__icon {
+	}
+}
+
+.hero-header {
+	z-index: 4;
+	flex: 1 1 100%;
+	display: flex;
+	align-items: center;
+
+	&__container {
+	}
+
+	&__title {
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		h1 {
+			font-weight: 400;
+			font-size: 3rem;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 1.1rem;
+		}
+	}
+
+	&__action {
+		margin-top: 3rem;
+		text-align: center;
+		button {
+			margin: 0 auto;
+			background-color: #fff;
+			color: $secondaryColor;
+			font-weight: 700;
+			text-transform: uppercase;
+			box-shadow: 0px 0px 2rem #fff;
+			border: 1px solid rgba($secondaryColor, 0.5);
+		}
+	}
+}
+
+//======================================================================================
+//======================================================================================
+
+@media (min-width: 768px) {
+	.burger {
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	.burger {
+		display: block;
+	}
+	.nav {
+		display: none;
+	}
+}
