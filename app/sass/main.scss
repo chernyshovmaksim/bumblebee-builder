@@ -15,6 +15,8 @@ html {
 	background-color: #fff;
 	font-family: "Montserrat", sans-serif;
 	font-size: 12px;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
@@ -24,8 +26,8 @@ html {
 }
 
 .btn {
-	background: #000;
-	color: #fff;
+	background: $secondaryColor;
+	color: $mainColor;
 	border: none;
 	padding: 1rem 3rem;
 	cursor: pointer;
@@ -35,4 +37,7 @@ html {
 //======================================================================================
 
 @import "./parts/header";
+@import "./parts/main-page";
+@import "./parts/product-page";
+@import "./parts/swiper";
 @import "./parts/footer";
