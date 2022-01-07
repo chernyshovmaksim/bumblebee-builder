@@ -2,42 +2,15 @@
 
 //======================================================================================
 //======================================================================================
-
-@import "reset";
 @import "vars";
 @import "mixins";
+//======================================================================================
+//======================================================================================
+
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 //======================================================================================
 //======================================================================================
 
-body,
-html {
-	background-color: #fff;
-	font-family: "Montserrat", sans-serif;
-	font-size: 12px;
-	display: flex;
-	flex-direction: column;
-}
-
-.container {
-	width: 90%;
-	max-width: 1080px;
-	margin: 0 auto;
-}
-
-.btn {
-	background: $secondaryColor;
-	color: $mainColor;
-	border: none;
-	padding: 1rem 3rem;
-	cursor: pointer;
-}
-
-//======================================================================================
-//======================================================================================
-
-@import "./parts/header";
-@import "./parts/main-page";
-@import "./parts/product-page";
-@import "./parts/swiper";
-@import "./parts/footer";
+@import "./parts/header"

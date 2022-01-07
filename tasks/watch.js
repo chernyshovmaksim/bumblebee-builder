@@ -6,8 +6,8 @@ const images = require("./images");
 const scripts = require("./scripts");
 
 module.exports = function watching (cb) {
-	watch("./app/sass/**/*.scss", series(style));
-	watch("./app/js/**/*.js", series(scripts));
+	watch("./app/sass/**/*", series(style));
+	watch("./app/js/**/*", series(scripts));
 	watch("./app/*.{html,htm}", series(html));
 	watch("./app/img/**/*", series(images));
 	cb();
