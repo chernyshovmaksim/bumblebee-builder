@@ -1,16 +1,247 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
-
 //======================================================================================
 //======================================================================================
 @import "vars";
 @import "mixins";
-//======================================================================================
-//======================================================================================
-
-@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 //======================================================================================
 //======================================================================================
+* {
+	box-sizing: border-box;
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "Montserrat", serif;
+	font-weight: 500;
+	font-size: 0.9rem;
+}
 
-@import "./parts/header"
+a {
+	color: $secondary-color;
+}
+
+.container {
+	width: 90%;
+	max-width: 1180px;
+	margin: 0 auto;
+	@media (max-width: 1024px) {
+		padding: 0 1rem;
+	}
+}
+
+//======================================================================================
+//======================================================================================
+
+@import "./parts/header";
+@import "./parts/footer";
+
+//======================================================================================
+//======================================================================================
+.products__title{
+	padding: 1rem 1rem !important;
+	h3{
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1.8rem;
+	}
+}
+.products__grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+	grid-row-gap: 4rem;
+	padding-bottom: 5rem;
+
+	.product {
+		@include shadow(1px, #000, 0.1);
+		padding: 0.5rem;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+
+		&__image {
+			width: 100%;
+			height: 300px;
+			position: relative;
+			overflow: hidden;
+			img {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+			@media (max-width: 576px) {
+				height: 150px;
+			}
+		}
+		&__title {
+			font-size: 1.3rem;
+			padding: 1rem 0;
+			a {
+				text-decoration: none;
+			}
+		}
+		&__price {
+			margin-top: auto;
+			font-weight: 700;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		&__action {
+			padding-top: 1rem;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 0.4rem;
+			a {
+				background-color: $secondary-color;
+				color: $main-color;
+				text-decoration: none;
+				font-weight: 400;
+				text-align: center;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 576px) {
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		grid-row-gap: 4rem;
+	}
+}
+
+//======================================================================================
+//======================================================================================
+
+footer.footer {
+	background-color: $secondary-color;
+	color: $main-color;
+	a{
+		color: $main-color;
+	}
+	.container {
+		display: grid;
+        grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: 
+            "fn fn fn fn" 
+            "fs fs fc fc"
+            "fp fp fp fp"
+			"fa fa fa fa";
+        grid-gap: 2rem;
+		@media (max-width: 1024px) {
+			padding: 1rem 1rem !important;
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				"fn fn"
+				"fs fs"
+				"fc fc"
+				"fp fp"
+				"fa fa";
+		}
+	}
+	.footer__nav {
+		grid-area: fn;
+		padding: 1rem 0;
+		display: flex;
+		justify-content: center;
+		text-transform: uppercase;
+		a{
+			margin-right: 2rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 0.6rem;
+		}
+	}
+	.footer__search {
+		grid-area: fs;
+		form{
+			width: 100%;
+			display: flex;
+			input{
+				width: 100%;
+				background-color: transparent;
+				padding: 0.5rem;
+				border: none;
+				border-bottom: 1px solid $main-color;
+				color: $main-color;
+				&:focus{
+					outline: none;
+					background-color: lighten($secondary-color, 10);
+				}
+			}
+			button{
+				width: 200px;
+				background-color: transparent;
+				border: 1px solid $main-color;
+				color: $main-color;
+				text-transform: uppercase;
+				&:hover{
+					cursor: pointer;
+				}
+				@media (max-width: 576px) {
+					font-size: 0.6rem;
+				}
+			}
+		}
+	}
+	.footer__callback {
+		grid-area: fc;
+		form{
+			width: 100%;
+			display: flex;
+			input{
+				width: 100%;
+				background-color: transparent;
+				padding: 0.5rem;
+				border: none;
+				border-bottom: 1px solid $main-color;
+				color: $main-color;
+				&:focus{
+					outline: none;
+					background-color: lighten($secondary-color, 10);
+				}
+			}
+			button{
+				width: 200px;
+				background-color: transparent;
+				border: 1px solid $main-color;
+				color: $main-color;
+				text-transform: uppercase;
+				&:hover{
+					cursor: pointer;
+				}
+				@media (max-width: 576px) {
+					font-size: 0.6rem;
+				}
+			}
+		}
+	}
+	.footer__copyright {
+		grid-area: fp;
+		text-align: center;
+		font-size: 0.8rem;
+		color: lighten($secondary-color, 10);
+		padding-top: 1rem;
+	}
+	.footer__author{
+		grid-area: fa;
+		text-align: center;
+		font-size: 0.8rem;
+		color: lighten($secondary-color, 10);
+		padding-bottom: 1rem;
+		a{
+			color: lighten($secondary-color, 10);
+		}
+	}
+}

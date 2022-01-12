@@ -1,13 +1,14 @@
-const bs = require('browser-sync');
+const bs = require("browser-sync");
 
 module.exports = function bs_html() {
 	bs.init({
 		server: {
-			baseDir: './public',
+			baseDir: "./public",
 		},
+		port: 8080,
 		callbacks: {
-			ready: function (err, bs) {}
+			ready: function (err, bs) {},
 		},
-		open: true
-	})
-}
+		open: true,
+	});
+};
