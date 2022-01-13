@@ -40,14 +40,54 @@ a {
 
 //======================================================================================
 //======================================================================================
+.search{
+	.container{
+		padding: 0 0;
+	}
+	&__form{
+		padding: 1rem 0;
+		width: 100%;
+
+		form{
+			display: flex;
+			input{
+				width: 100%;
+				background: transparent;
+				border: none;
+				padding: 0.5rem;
+				border-bottom: 1px solid $secondary-color;
+				&:focus{
+					outline: none;
+					background-color: darken($main-color, 10);
+				}
+				@media (max-width: 425px) {
+					&::placeholder{
+						font-size: 0.6rem;
+					}
+				}
+			}
+			button{
+				width: 200px;
+				background: transparent;
+				border: 1px solid $secondary-color;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
 .products__title{
-	padding: 1rem 1rem !important;
+	padding: 1rem 0rem !important;
+	display: flex;
 	h3{
 		text-transform: uppercase;
 		font-weight: 400;
 		font-size: 1.8rem;
+		padding-left: 0;
+		margin-left: 0;
 	}
 }
+
 .products__grid {
 	width: 100%;
 	display: grid;
@@ -57,7 +97,7 @@ a {
 	padding-bottom: 5rem;
 
 	.product {
-		@include shadow(1px, #000, 0.1);
+		@include shadow(1px, #000, 0.3);
 		padding: 0.5rem;
 		background-color: #fff;
 		display: flex;
@@ -72,9 +112,6 @@ a {
 				width: 100%;
 				object-fit: cover;
 				object-position: center;
-			}
-			@media (max-width: 576px) {
-				height: 150px;
 			}
 		}
 		&__title {
@@ -94,6 +131,9 @@ a {
 			padding-top: 1rem;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: 
+				"atc ab"
+				"poc poc";
 			grid-gap: 0.4rem;
 			a {
 				background-color: $secondary-color;
@@ -102,6 +142,16 @@ a {
 				font-weight: 400;
 				text-align: center;
 				padding: 0.5rem 0;
+				border-radius: 4px;
+				&:nth-child(1){
+					grid-area: atc;
+				}
+				&:nth-child(2){
+					grid-area: ab;
+				}
+				&:nth-child(3){
+					grid-area: poc;
+				}
 			}
 		}
 	}
@@ -118,6 +168,36 @@ a {
 		grid-row-gap: 4rem;
 	}
 }
+
+.why-we {
+	margin-bottom: 5rem;
+	padding: 5rem 0;
+	.container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	
+		.why-we__icon {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 1rem;
+			img{
+				width: 64px;
+			}
+		}
+	
+		.why-we__title {
+			text-align: center;
+			font-size: 1.8rem;
+			padding-bottom: 1rem;
+		}
+	}
+}
+
 
 //======================================================================================
 //======================================================================================
@@ -178,6 +258,7 @@ footer.footer {
 				&:focus{
 					outline: none;
 					background-color: lighten($secondary-color, 10);
+					border-bottom: 1px solid darken($main-color, 60);
 				}
 			}
 			button{
@@ -210,6 +291,7 @@ footer.footer {
 				&:focus{
 					outline: none;
 					background-color: lighten($secondary-color, 10);
+					border-bottom: 1px solid darken($main-color, 60);
 				}
 			}
 			button{
@@ -231,17 +313,17 @@ footer.footer {
 		grid-area: fp;
 		text-align: center;
 		font-size: 0.8rem;
-		color: lighten($secondary-color, 10);
+		color: lighten($secondary-color, 20);
 		padding-top: 1rem;
 	}
 	.footer__author{
 		grid-area: fa;
 		text-align: center;
 		font-size: 0.8rem;
-		color: lighten($secondary-color, 10);
+		color: lighten($secondary-color, 20);
 		padding-bottom: 1rem;
 		a{
-			color: lighten($secondary-color, 10);
+			color: lighten($secondary-color, 20);
 		}
 	}
 }
