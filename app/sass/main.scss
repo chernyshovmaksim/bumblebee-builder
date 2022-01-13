@@ -40,7 +40,88 @@ a {
 
 //======================================================================================
 //======================================================================================
+.hero {
+	background-image: url("../img/bg.webp");
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	.container{
+		min-height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 2.5rem;
+		// padding-bottom: 5rem;
+	}
+	&__overlay{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba($secondary-color, 0.7);
+		z-index: 1;
+
+	}
+	&__title {
+		color: $main-color;
+		width: 50%;
+		z-index: 10;
+		h2{
+			font-weight: 400;
+			font-size: 3rem;
+			// text-transform: uppercase;
+			font-family: 'Times New Roman', Times, serif;
+			text-shadow: 1px 1px 1px #000;
+			@media (max-width: 768px) {
+				font-size: 2rem;
+			}
+		}
+		@media (max-width: 768px) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		color: $main-color;
+		width: 50%;
+		z-index: 10;
+		color: darken($main-color, 15);
+		text-shadow: 1px 1px 1px #000;
+		h4{
+			font-weight: 400;
+			font-size: 1.1rem;
+			margin-top: 0;
+		}
+		@media (max-width: 768px) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&__action{
+		background-color: $main-color;
+		z-index: 10;
+		margin-top: 1rem;
+		padding: 1rem 0;
+		width: 300px;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: 4px;
+		font-weight: 700;
+		box-shadow: 0px 0px 30px rgba($main-color, 0.8);
+		&:hover{
+			cursor: pointer;
+		}
+		@media (max-width: 768px) {
+			margin: 5rem auto;
+		}
+	}
+}
+
+
 .search{
+	margin-top: 5rem;
 	.container{
 		padding: 0 0;
 	}
