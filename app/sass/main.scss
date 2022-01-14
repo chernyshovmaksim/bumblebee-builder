@@ -50,8 +50,8 @@ a {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-top: 2.5rem;
-		// padding-bottom: 5rem;
+		align-items: center;
+		padding: 10rem 0;
 	}
 	&__overlay{
 		position: absolute;
@@ -70,9 +70,10 @@ a {
 		h2{
 			font-weight: 400;
 			font-size: 3rem;
-			// text-transform: uppercase;
 			font-family: 'Times New Roman', Times, serif;
 			text-shadow: 1px 1px 1px #000;
+			margin: 0;
+			text-align: center;
 			@media (max-width: 768px) {
 				font-size: 2rem;
 			}
@@ -92,7 +93,9 @@ a {
 		h4{
 			font-weight: 400;
 			font-size: 1.1rem;
-			margin-top: 0;
+			text-align: center;
+			margin: 0;
+			margin-top: 1.5rem;
 		}
 		@media (max-width: 768px) {
 			width: 100%;
@@ -102,7 +105,7 @@ a {
 	&__action{
 		background-color: $main-color;
 		z-index: 10;
-		margin-top: 1rem;
+		margin-top: 2.5rem;
 		padding: 1rem 0;
 		width: 300px;
 		text-align: center;
@@ -135,7 +138,7 @@ a {
 				width: 100%;
 				background: transparent;
 				border: none;
-				padding: 0.5rem;
+				padding: 1rem 2rem;
 				border-bottom: 1px solid $secondary-color;
 				&:focus{
 					outline: none;
@@ -143,7 +146,7 @@ a {
 				}
 				@media (max-width: 425px) {
 					&::placeholder{
-						font-size: 0.6rem;
+						font-size: 0.9rem;
 					}
 				}
 			}
