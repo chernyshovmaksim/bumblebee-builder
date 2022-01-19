@@ -41,35 +41,34 @@ a {
 //======================================================================================
 //======================================================================================
 
-
-.search{
+.search {
 	margin-top: 5rem;
-	.container{
+	.container {
 		padding: 0 0;
 	}
-	&__form{
+	&__form {
 		padding: 1rem 0;
 		width: 100%;
 
-		form{
+		form {
 			display: flex;
-			input{
+			input {
 				width: 100%;
 				background: transparent;
 				border: none;
 				padding: 1rem 2rem;
 				border-bottom: 1px solid $secondary-color;
-				&:focus{
+				&:focus {
 					outline: none;
 					background-color: darken($main-color, 10);
 				}
 				@media (max-width: 425px) {
-					&::placeholder{
+					&::placeholder {
 						font-size: 0.9rem;
 					}
 				}
 			}
-			button{
+			button {
 				width: 200px;
 				background: transparent;
 				border: 1px solid $secondary-color;
@@ -79,10 +78,10 @@ a {
 	}
 }
 
-.products__title{
+.products__title {
 	padding: 1rem 0rem !important;
 	display: flex;
-	h3{
+	h3 {
 		text-transform: uppercase;
 		font-size: 1.8rem;
 		padding-left: 0;
@@ -165,7 +164,7 @@ a {
 .why-we {
 	margin-bottom: 5rem;
 	padding: 5rem 0;
-	.container{
+	.container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 2rem;
@@ -173,16 +172,16 @@ a {
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
 		}
-	
+
 		.why-we__icon {
 			display: flex;
 			justify-content: center;
 			padding-bottom: 1rem;
-			img{
+			img {
 				width: 64px;
 			}
 		}
-	
+
 		.why-we__title {
 			text-align: center;
 			font-size: 1.8rem;
@@ -191,10 +190,8 @@ a {
 	}
 }
 
-
 //======================================================================================
 //======================================================================================
-
 
 .categories {
 	padding: 5rem 0;
@@ -204,13 +201,13 @@ a {
 		grid-gap: 1rem;
 
 		@media (max-width: 1280px) {
-			grid-template-columns: repeat(3, 1fr );
+			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (max-width: 960px) {
-			grid-template-columns: repeat(2, 1fr );
+			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (max-width: 680px) {
-			grid-template-columns: repeat(1, 1fr );
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }
@@ -219,24 +216,24 @@ a {
 	border-radius: 2px;
 	padding: 0.25rem;
 	z-index: 20;
-	a{
+	a {
 		display: grid;
 		grid-template-columns: 150px 1fr 1fr 1fr;
 		grid-gap: 0.5rem;
 		text-decoration: none;
-		&:hover{
+		&:hover {
 			cursor: pointer;
 		}
 
 		@media (max-width: 680px) {
-			grid-template-columns: repeat(2, 1fr );
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
 	&__img {
 		grid-column: 1/2;
 		height: 150px;
-		img{
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -252,7 +249,36 @@ a {
 	}
 }
 
+//======================================================================================
+//======================================================================================
 
+.buy-one-click {
+	.form {
+		&__group {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2rem;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			label{
+				margin-bottom: 0.5rem;
+			}
+			input{
+				width: 30vw;
+				padding: 0.5em;
+				@media (max-width: 768px) {
+					width: 50vw;
+				}
+				@media (max-width: 425px) {
+					width: 75vw;
+				}
+			}
+		}
+	}
+}
 
 //======================================================================================
 //======================================================================================
@@ -260,24 +286,24 @@ a {
 footer.footer {
 	background-color: $secondary-color;
 	color: $main-color;
-	a{
+	a {
 		color: $main-color;
 	}
 	.container {
 		display: grid;
-        grid-template-columns: repeat(4, 1fr);
-		grid-template-areas: 
-            "fn fn fn fn" 
-            "fs fs fc fc"
-            "fp fp fp fp"
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			"fn fn fn fn"
+			"fs fs fc fc"
+			"fp fp fp fp"
 			"fa fa fa fa";
-        grid-gap: 2rem;
+		grid-gap: 2rem;
 		@media (max-width: 1024px) {
 			padding: 1rem 1rem !important;
 		}
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr 1fr;
-			grid-template-areas: 
+			grid-template-areas:
 				"fn fn"
 				"fs fs"
 				"fc fc"
@@ -291,7 +317,7 @@ footer.footer {
 		display: flex;
 		justify-content: center;
 		text-transform: uppercase;
-		a{
+		a {
 			margin-right: 2rem;
 		}
 		@media (max-width: 576px) {
@@ -300,29 +326,29 @@ footer.footer {
 	}
 	.footer__search {
 		grid-area: fs;
-		form{
+		form {
 			width: 100%;
 			display: flex;
-			input{
+			input {
 				width: 100%;
 				background-color: transparent;
 				padding: 0.5rem;
 				border: none;
 				border-bottom: 1px solid $main-color;
 				color: $main-color;
-				&:focus{
+				&:focus {
 					outline: none;
 					background-color: lighten($secondary-color, 10);
 					border-bottom: 1px solid darken($main-color, 60);
 				}
 			}
-			button{
+			button {
 				width: 200px;
 				background-color: transparent;
 				border: 1px solid $main-color;
 				color: $main-color;
 				text-transform: uppercase;
-				&:hover{
+				&:hover {
 					cursor: pointer;
 				}
 				@media (max-width: 576px) {
@@ -333,29 +359,29 @@ footer.footer {
 	}
 	.footer__callback {
 		grid-area: fc;
-		form{
+		form {
 			width: 100%;
 			display: flex;
-			input{
+			input {
 				width: 100%;
 				background-color: transparent;
 				padding: 0.5rem;
 				border: none;
 				border-bottom: 1px solid $main-color;
 				color: $main-color;
-				&:focus{
+				&:focus {
 					outline: none;
 					background-color: lighten($secondary-color, 10);
 					border-bottom: 1px solid darken($main-color, 60);
 				}
 			}
-			button{
+			button {
 				width: 200px;
 				background-color: transparent;
 				border: 1px solid $main-color;
 				color: $main-color;
 				text-transform: uppercase;
-				&:hover{
+				&:hover {
 					cursor: pointer;
 				}
 				@media (max-width: 576px) {
@@ -371,13 +397,13 @@ footer.footer {
 		color: lighten($secondary-color, 20);
 		padding-top: 1rem;
 	}
-	.footer__author{
+	.footer__author {
 		grid-area: fa;
 		text-align: center;
 		font-size: 0.8rem;
 		color: lighten($secondary-color, 20);
 		padding-bottom: 1rem;
-		a{
+		a {
 			color: lighten($secondary-color, 20);
 		}
 	}
