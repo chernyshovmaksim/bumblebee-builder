@@ -18,7 +18,24 @@
     <!-- Header -->
     <!---------------------------------------------------------------->
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <div class="header__logo logo">
+          <a href="/">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <a href="/">Главная</a>
+          <a href="/">Каталог</a>
+          <a href="/">Корзина</a>
+          <a href="/">Контакты</a>
+        </nav>
+        <div class="header__cart">
+          <a href="/">
+            <img src="./img/icons/cart.svg" alt="">
+          </a>
+        </div>
+      </div>
     </header>
 
     <!---------------------------------------------------------------->
@@ -130,7 +147,9 @@
             <div class="product__price"><span>80</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -145,7 +164,9 @@
             <div class="product__price"><span>80</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -160,7 +181,9 @@
             <div class="product__price"><span>80</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -175,7 +198,9 @@
             <div class="product__price"><span>80</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
         </div>
@@ -198,7 +223,9 @@
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
               <!-- <a href="./product.html" class="btn btn-about">Подробнее</a> -->
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -213,7 +240,9 @@
             <div class="product__price"><span>1400</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -228,7 +257,9 @@
             <div class="product__price"><span>1400</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
           <div class="products__item product">
@@ -243,7 +274,9 @@
             <div class="product__price"><span>1400</span> ₽</div>
             <div class="product__action">
               <a href="#" class="btn btn-cart">В корзину</a>
-              <a href="#" data-fancybox data-src="#buy-one-click">Купить в один клик</a>
+              <a href="#" data-fancybox data-src="#buy-one-click"
+                >Купить в один клик</a
+              >
             </div>
           </div>
         </div>
@@ -256,7 +289,7 @@
         <div class="container">
           <div class="why-we__item">
             <div class="why-we__icon">
-              <img src="./img/icons/cart.webp" alt="Всегда свежие цветы" />
+              <img src="./img/icons/flower.svg" alt="Всегда свежие цветы" />
             </div>
             <div class="why-we__title">Всегда свежие цветы</div>
             <div class="why-we__description">
@@ -266,7 +299,7 @@
           </div>
           <div class="why-we__item">
             <div class="why-we__icon">
-              <img src="./img/icons/delivery.webp" alt="Удобная доставка" />
+              <img src="./img/icons/delivery.svg" alt="Удобная доставка" />
             </div>
             <div class="why-we__title">Удобная доставка</div>
             <div class="why-we__description">
@@ -276,7 +309,7 @@
           </div>
           <div class="why-we__item">
             <div class="why-we__icon">
-              <img src="./img/icons/percent.webp" alt="Всегда свежие цветы" />
+              <img src="./img/icons/percent.svg" alt="Всегда свежие цветы" />
             </div>
             <div class="why-we__title">Приятные мелочи</div>
             <div class="why-we__description">
@@ -328,22 +361,27 @@
     <!---------------------------------------------------------------->
     <!-- Modals -->
     <!---------------------------------------------------------------->
-    <div class="buy-one-click" id="buy-one-click" style="display: none;">
+    <div class="buy-one-click" id="buy-one-click" style="display: none">
       <form class="form" action="/" method="post">
         <div class="form__group">
           <label for="name">Ваше Имя</label>
-          <input type="text" name="name" placeholder="Ваше имя" id="name">
+          <input type="text" name="name" placeholder="Ваше имя" id="name" />
         </div>
         <div class="form__group">
           <label for="tel">Ваш номер телефона</label>
-          <input type="tel" name="tel" required placeholder="Ваш номер телефона" id="tel">
+          <input
+            type="tel"
+            name="tel"
+            required
+            placeholder="Ваш номер телефона"
+            id="tel"
+          />
         </div>
         <div class="form__group">
           <button type="submit">Создать заявку</button>
         </div>
       </form>
     </div>
-
 
     <!---------------------------------------------------------------->
     <!-- Scripts -->

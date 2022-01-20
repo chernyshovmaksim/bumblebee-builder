@@ -17,10 +17,11 @@ html {
 	font-family: "Montserrat", serif;
 	font-weight: 500;
 	font-size: 0.9rem;
+	background-color: $secondary-color;
 }
 
 a {
-	color: $secondary-color;
+	color: $main-color;
 }
 
 .container {
@@ -57,10 +58,14 @@ a {
 				background: transparent;
 				border: none;
 				padding: 1rem 2rem;
-				border-bottom: 1px solid $secondary-color;
+				border-bottom: 1px solid $main-color;
+				color: $main-color;
 				&:focus {
 					outline: none;
-					background-color: darken($main-color, 10);
+					background-color: lighten($secondary-color, 10);
+				}
+				&::placeholder {
+					color: darken($main-color, 10);
 				}
 				@media (max-width: 425px) {
 					&::placeholder {
@@ -71,8 +76,9 @@ a {
 			button {
 				width: 200px;
 				background: transparent;
-				border: 1px solid $secondary-color;
+				border: 1px solid $main-color;
 				text-transform: uppercase;
+				color: $main-color;
 			}
 		}
 	}
@@ -99,12 +105,12 @@ a {
 
 	.product {
 		padding: 0.5rem;
-		background-color: #fff;
+		background-color: transparent;
 		display: flex;
 		flex-direction: column;
 		border-radius: 2px;
 
-		@include shadow(5px, $secondary-color, 0.1);
+		@include shadow(2px, white, 0.1);
 
 		&__image {
 			width: 100%;
@@ -123,12 +129,14 @@ a {
 			padding: 1rem 0;
 			a {
 				text-decoration: none;
+				color: $main-color;
 			}
 		}
 		&__price {
 			margin-top: auto;
 			font-weight: 700;
 			font-size: 1.5rem;
+			color: $main-color;
 		}
 		&__action {
 			padding-top: 1rem;
@@ -136,8 +144,8 @@ a {
 			grid-template-columns: repeat(1, 1fr);
 			grid-gap: 0.4rem;
 			a {
-				border: 1px solid $secondary-color;
-				color: $secondary-color;
+				border: 1px solid $main-color;
+				color: $main-color;
 				text-decoration: none;
 				font-weight: 600;
 				text-align: center;
@@ -164,6 +172,7 @@ a {
 .why-we {
 	margin-bottom: 5rem;
 	padding: 5rem 0;
+	color: $main-color;
 	.container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -177,8 +186,12 @@ a {
 			display: flex;
 			justify-content: center;
 			padding-bottom: 1rem;
+			color: $main-color;
 			img {
 				width: 64px;
+				color: $main-color;
+				fill: $main-color;
+				filter: invert(100%);
 			}
 		}
 
@@ -212,7 +225,7 @@ a {
 	}
 }
 .category {
-	@include shadow(5px, $secondary-color, 0.1);
+	@include shadow(1px, white, 0.1);
 	border-radius: 2px;
 	padding: 0.25rem;
 	z-index: 20;
@@ -243,9 +256,9 @@ a {
 	&__title {
 		grid-column: 2/3;
 		align-self: center;
-		font-weight: 400;
+		font-weight: 600;
 		text-transform: uppercase;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 }
 

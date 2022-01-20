@@ -1,0 +1,41 @@
+.header {
+    padding: 5rem 0;
+    .container {
+        display: grid;
+        grid-template-columns: 40vw 1fr 1fr 1fr;
+    }
+
+    &__logo {
+        a{
+            img{
+                width: 100%;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__nav {
+        grid-column: 2/4;
+        align-self: center;
+        justify-self: end;
+        a{
+            margin-left: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__cart {
+        grid-column: 4/5;
+        align-self: center;
+        justify-self: end;
+        a{
+            img{
+                filter: invert(100%);
+                width: 2rem;
+            }
+        }
+    }
+}
