@@ -1,14 +1,57 @@
 .header {
-    padding: 5rem 0;
     .container {
         display: grid;
-        grid-template-columns: 40vw 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 350px 100px;
+        grid-template-areas: 
+            "hc hc hc hc"
+            "hl hl hm hk";
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+                "hc hc hc hc" 
+                "hl hl hl hk";
+        }
     }
-}
+    .contacts{
+        grid-area: hc;
+        padding-top: 1rem;
+        padding-bottom: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
+        .hamburger{
+            filter: invert(0%);
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
 
-
+        &__item{
+            margin-left: 1rem;
+            &:first-child{
+                margin-left: 0;
+                margin-right: auto;
+            }
+            &:nth-child(3){
+                margin-left: 3rem;
+            }
+            a{
+                font-size: 1.5rem;
+                text-decoration: none;
+                img{
+                    width: 2rem;
+                    filter: invert(100%);
+                }
+                @media (max-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
     &__logo {
+        grid-area: hl;
         a{
             img{
                 width: 100%;
@@ -20,9 +63,12 @@
     }
 
     &__nav {
-        grid-column: 2/4;
+        grid-area: hm;
         align-self: center;
         justify-self: end;
+        @media (max-width: 768px) {
+            display: none;
+        }
         a{
             margin-left: 1rem;
             text-transform: uppercase;
@@ -31,7 +77,7 @@
     }
 
     &__cart {
-        grid-column: 4/5;
+        grid-area: hk;
         align-self: center;
         justify-self: end;
         a{
