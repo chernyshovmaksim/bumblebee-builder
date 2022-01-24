@@ -289,6 +289,14 @@ a {
 					width: 75vw;
 				}
 			}
+			button{
+				padding: 1rem 4rem;
+				background-color: $secondary-color;
+				color: $main-color;
+				text-transform: uppercase;
+				border: none;
+				border-radius: 2px;
+			}
 		}
 	}
 }
